@@ -1,27 +1,33 @@
 import React from "react";
-import Heading from "./mini-components/Heading";
 import NewBtn from "./mini-components/NewBtn";
-import DetailsComponents from "./mini-components/DetailsComponents";
 
 const Hero = () => {
   return (
-    <div className="ml-[20px] mb-[20px]">
-      <DetailsComponents
-        title="Make your business powerful with shade"
-        details="With lots of unique blocks, you can easily build a page without coding. Build your next consultancy website within few minutes."
-        btnText="Get a free quote"
-      />
+    <section
+      style={{ backgroundImage: "back_pattern.svg" }}
+      className="min-h-screen px-[213px] grid grid-cols-2 items-center gap-10 mt-12"
+    >
+      <div className="w-[474px] h-[362px]">
+        <h1 className="font-bold font-mont text-5xl leading-[58px]">
+          Make your business powerful with shade
+        </h1>
+        <p className="mt-4">
+          With lots of unique blocks you can easily build a page without
+          coding.Build your next consultancy website within minutes
+        </p>
+        <NewBtn
+          btnText="Get a free Quote"
+          className="width-[210px] h-[59px] mt-8 text-sm"
+        />
+        <span className="text-sm font-bold block mt-7">
+          Watch how we can help
+        </span>
+      </div>
 
-      <NewBtn
-        className="rounded-md bg-slate-500 w-[60px] h-[45px] pl-[5px] pr-[5px]"
-        btnText="Click me"
-      />
-
-      <Heading
-        className={`font-bold text-4xl capitalize`}
-        headingText={`Hero Heading`}
-      />
-    </div>
+      <div>
+        <img src="hero_pattern.svg" alt="Hero img" />
+      </div>
+    </section>
   );
 };
 

@@ -1,25 +1,17 @@
 import React from "react";
-import Navbar from "./Components/Navbar";
-import Hero from "./Components/Hero";
-import Info from "./Components/Info";
-import Services from "./Components/Services";
-import Footer from "./Components/Footer";
-import Reasons from "./Components/Reasons";
-import CTA from "./Components/CTA";
-import Testimonials from "./Components/Testimonials";
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import Homepage from "./Pages/Homepage";
+import Seconpage from "./Pages/Seconpage";
 
 const App = () => {
   return (
-    <main className="overflow-x-hidden scroll-smooth font-mont">
-      <Navbar />
-      <Hero />
-      <Info />
-      <Services />
-      <Reasons />
-      <CTA />
-      <Testimonials />
-      <Footer />
-    </main>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Seconpage />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 };
 
